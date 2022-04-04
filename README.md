@@ -7,8 +7,8 @@ In order to run the project just rund `docker-compose up` and that's build the d
 1. How did you complete the DB schema:
     Database was created using `SQLAlchemy` library. I created `Metric` and `ValueDefinition` tables and following commands created my schema:
     ```
-    from app import db
-    db.create_all()
+    >>> from app import db, create_app
+    >>> db.create_all(app=create_app())
     ```
     which creates following schema:
     ```

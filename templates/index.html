@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<div class='header'>
+    <a href='/metrics'>Metrics json</a><br>
+    <a href='/definitions'>Value Definitions json</a><br>
+    <a href='/upload-csv'>Upload csv</a>
+</div>
+{%  endblock %}
+
+{% block body %}
+<div class="content">
+
+    {% if metrics|length < 1%}
+    <h4> There is no metric.</h4>
+    {% else%}
+        <h3>Metrics</h3>
+        <table>
+            <tr>
+                <th>Code</th>
+                <th>Description</th>
+            </tr>
+            {%  for metric in metrics %}
+                <tr>
+                    <td>{{ metric.code}}</td>
+                    <td>{{ metric.description}}</td>
+                </tr>
+            {% endfor%}
+        </table>
+    {% endif %}
+
+    {% if value_definitions|length < 1%}
+    <h4> Thre is no value-definition.</h4>
+    {% else%}
+        <h3>Definitions</h3>
+        <table>
+            <tr>
+                <th>Label</th>
+                <th>Type</th>
+                <th>Metric code</th>
+            </tr>
+            {%  for definition in value_definitions %}
+                <tr>
+                    <td>{{ definition.label}}</td>
+                    <td>{{ definition.type}}</td>
+                    <td>{{ definition.metric.code}}</td>
+                </tr>
+            {% endfor%}
+        </table>
+    {% endif %}
+</div>
+{% endblock %} 

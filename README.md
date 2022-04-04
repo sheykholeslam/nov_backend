@@ -34,10 +34,10 @@ In order to run the project just rund `docker-compose up` and that's build the d
     By running `docker-compose up` from the project root, the app will be accessible on `localhost:5001`.
 
 4. How to call your API endpoint to read the database and show the result of your route(s). Document your route(s):
-    `http://localhost:5001`: shows the content of tables (if any data is uploaded) as well as links to json of metrics and value definitions and upload csv page.
-    `http://localhost:5001/metrics`: shows the metrics in json form
-    `http://localhost:5001/definitions`: shows the definitions in json form
-    `http://localhost:5001/upload-csv`: provides a form to upload and import csv file into database
-     
+    1. `http://localhost:5001`: shows the content of tables (if any data is uploaded) as well as links to json of metrics and value definitions and upload csv page.
+    2. `http://localhost:5001/metrics`: shows the metrics in json form
+    3. `http://localhost:5001/definitions`: shows the definitions in json form
+    4. `http://localhost:5001/upload-csv`: provides a form to upload and import csv file into database
+
 5. Any additional documentation you wish to provide or is required to run your project:
     I had planned to add some testing to the project but unfortunately I ran out of time.

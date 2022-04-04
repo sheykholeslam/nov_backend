@@ -6,18 +6,21 @@ import os
 from os.path import join, dirname, realpath
 import pandas as pd
 
+from model import *
 from upload import parse_csv
 
-app = Flask(__name__)
+def create_app():
+    app = Flask(__name__)
+    UPLOAD_FOLDER = 'uploads'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db/test.db'
+    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-UPLOAD_FOLDER = 'uploads'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db/test.db'
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-from model import *
+    db.init_app(app)
+    ma.init_app(app)
+    return app
 
-db.init_app(app)
-ma.init_app(app)
+app =create_app()
 
 @app.route('/', methods=['POST', 'GET'])
 def index():

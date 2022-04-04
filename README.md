@@ -6,6 +6,9 @@ In order to run the project just rund `docker-compose up` and that's build the d
 ## How I finished to project
 1. How did you complete the DB schema. You need to at least provide a SQL statement.
     Database was created using `SQLAlchemy` library. I created `Metric` and `ValueDefinition` tables and following commands created my schema:
+```
+test
+```
 
 
 2. How to import the CSV to the SQL database. Document the entry point in your software to do so.

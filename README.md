@@ -40,4 +40,4 @@ In order to run the project just rund `docker-compose up` and that's build the d
     4. `http://localhost:5001/upload-csv`: provides a form to upload and import csv file into database
 
 5. Any additional documentation you wish to provide or is required to run your project:
-    I had planned to add some testing to the project but unfortunately I ran out of time.
+    I had planned to add some testing to the project and clean app.py more to separate routes as well but unfortunately I ran out of time.

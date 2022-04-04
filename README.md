@@ -3,7 +3,7 @@
 ##  How to run
 In order to run the project just rund `docker-compose up` and that's build the docker and run the app on port `5001`.
 
-## How I finished to project
+## How I finished the project
 1. How did you complete the DB schema:
     Database was created using `SQLAlchemy` library, I created `Metric` and `ValueDefinition` models and following commands created my schema:
     ```
